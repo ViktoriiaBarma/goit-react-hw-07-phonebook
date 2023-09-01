@@ -7,8 +7,7 @@ export const Container = styled.div`
   justify-content: center;
 
   margin: 0 auto;
-  padding: 24px;
-  height: 100vh;
+    padding: 40px 15px;
   width: 100%;
      background-color: #c9c4cd;
 `;
@@ -20,8 +19,6 @@ export const MainBlock = styled.main`
   justify-content: center;
 
   margin: 0 auto;
-margin-top: 50px;
-    margin-bottom: 30px;
-  height: 100vh;
+
   width: 100%;
 `;

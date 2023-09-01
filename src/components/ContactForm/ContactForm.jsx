@@ -1,5 +1,3 @@
-//import { useSelector } from "react-redux";
-//import { getContacts } from "../redux/selectors";
 import { useDispatch } from 'react-redux';
 import { addContact } from '../redux/contacts-operations';
 import { IoMdPersonAdd } from 'react-icons/io';
@@ -16,28 +14,13 @@ import {
 
 export const ContactForm = () => {
     const dispatch = useDispatch();
-    //const contacts = useSelector(getContacts)
+  
 
     const handleSubmit = e => {
         e.preventDefault();
-        const form = e.target;
-    //     if (contacts.some(({ name }) => name === form.elements.name.value)) {
-    //         form.reset()
-    //         return toast('contact alredy added', {
-    //             position: "top-right",
-    //             autoClose: 3000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "dark",
-    //         });
-    //     }
-    //     dispatch(addContact({ name: form.elements.name.value, phone: form.elements.number.value }))
-    //     form.reset()
-    // }
-    dispatch(addContact(form.elements.name.value, form.elements.number.value));
+      const form = e.target;
+      console.log(form.elements.number.value)
+      dispatch(addContact({ name: form.elements.name.value, phone: form.elements.number.value }));
     form.reset();
   };
 
